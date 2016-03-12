@@ -1,3 +1,5 @@
 .DS_Stores
 node_modules
 typings
+dist
+spec/*.js
