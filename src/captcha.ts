@@ -13,7 +13,7 @@ class Capcha {
         this.operator = Operator.createOperator(operator);
     }
 
-    show() :string {
+    toString() :string {
         return this.leftOperand.toString() + " " + this.operator.toString() + " " + this.rightOperand.toString();
     }
 }
