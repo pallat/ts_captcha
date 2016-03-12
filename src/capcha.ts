@@ -2,7 +2,17 @@ class Capcha {
 
     constructor(public pattern:number, public left:number, public operator:number, public right:number) {}
 
-    show() :string {
+    getOperator() :string {
+        let mapOperator = {
+            1: "+",
+            2: "-",
+            3: "*",
+            4: "/"
+        };
+        return mapOperator[this.operator];
+    }
+
+    getStringNumber(num: number) :string {
         let mapNumber = {
             1: "ONE",
             2: "TWO",
@@ -15,19 +25,17 @@ class Capcha {
             9: "NINE"
         };
 
-        let mapOperator = {
-            1: "+",
-            2: "-",
-            3: "*",
-            4: "/"
-        };
+        return mapNumber[num]
+    }
+
+    show() :string {
 
         let mapPattern = {
             1: () => {
-                return this.left.toString() + " " + mapOperator[this.operator] + " " + mapNumber[this.right];
+                return this.left.toString() + " " + this.getOperator() + " " + this.getStringNumber(this.right);
             },
             2: () => {
-                return mapNumber[this.left] + " " + mapOperator[this.operator] + " " + this.right.toString();
+                return this.getStringNumber(this.left) + " " + this.getOperator() + " " + this.right.toString();
             }
         }
 
