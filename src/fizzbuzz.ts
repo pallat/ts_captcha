@@ -1,5 +1,5 @@
 class FizzBuzz {
-    constructor(){}
+    constructor() {}
     say(n : number): string{
         return "1";
     }
