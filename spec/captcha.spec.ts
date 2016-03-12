@@ -1,5 +1,5 @@
 /// <reference path="../typings/main/ambient/jasmine/index.d.ts" />
-/// <reference path="../src/capcha.ts" />
+/// <reference path="../src/captcha.ts" />
 describe("Capcha", () => {
     describe("Test right operand", () => {
         it("should show 1 + ONE when put 1 1 1 1", () => {
