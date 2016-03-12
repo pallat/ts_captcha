@@ -9,4 +9,8 @@ describe("FizzBuzz", () => {
         let fizzBuzz = new FizzBuzz();
         expect(fizzBuzz.say(2)).toEqual("2");
     });
+    it("Say 3 should Fizz", () => {
+        let fizzBuzz = new FizzBuzz();
+        expect(fizzBuzz.say(3)).toEqual("Fizz");
+    });
 });
